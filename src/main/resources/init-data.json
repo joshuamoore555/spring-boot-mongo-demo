@@ -1,0 +1,6 @@
+[
+{"_id":{"$oid":"5c45f5b6ab30753124477bbf"},"name":"Sales","_class":"com.frankc.training.employee.entities.Department"},
+{"_id":{"$oid":"5c45f5e5ab30753124477bc1"},"name":"Marketing","_class":"com.frankc.training.employee.entities.Department"}
+]
+{"_id":{"$oid":"5c45f5b6ab30753124477bbf"},"name":"Sales","_class":"com.frankc.training.employee.entities.Department"}
+{"_id":{"$oid":"5c45f5e5ab30753124477bc1"},"name":"Marketing","_class":"com.frankc.training.employee.entities.Department"}
