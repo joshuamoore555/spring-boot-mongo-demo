@@ -1,0 +1,24 @@
+version: '2'
+
+services:
+  docker-mongodb:
+    image: mongo:latest
+    #environment:
+    #  - MONGO_INITDB_ROOT_USERNAME=root
+    #  - MONGO_INITDB_ROOT_PASSWORD=rootpass
+
+  rest-employee-webapp:
+    image: restemployee:latest
+    build:
+      context: ../
+      dockerfile: deploy/Dockerfile
+    depends_on:
+      - docker-mongodb
+    ports:
+      - 8080:8080
+    environment:
+      - SPRING_PROFILE=prod,init-data
+      - DB_HOST=docker-mongodb
+      #- DB_USERNAME=root
+      #- DB_PASSWORD=rootpass
+      - DB_NAME=employees
