@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  mymongo:
+    image: mongo:latest
+
+  rest-employee-webapp:
+    image: restemployee:dev
+    build:
+      context: .
+      args:
+        JAR_FILE: target/rest-employee-0.0.1-SNAPSHOT.jar
+    depends_on:
+      - mymongo
+    ports:
+      - 8080:8080
+    environment:
+      - DB_HOST=mymongo
+      - spring.profiles.active=prod,init-data
