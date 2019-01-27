@@ -65,7 +65,7 @@ public class ApplicationIntegrationTests {
 
         DocumentContext jsonData = JsonPath.parse(result);
         assertEquals("Expected two departments in init-data.json",
-                   (Integer)jsonData.read("$.size()"), new Integer(2));
+                   (Integer)jsonData.read("$.size()"), new Integer(3));
 
         assertEquals("Expected Sales as first department",
                      (String)jsonData.read("$[0].name"), "Sales");

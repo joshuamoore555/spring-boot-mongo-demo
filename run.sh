@@ -3,8 +3,6 @@
 # run tests, compile and build the jar
 ./mvnw clean package
 
-cd deploy
-
 # build restshorturl image
 docker-compose build
 
